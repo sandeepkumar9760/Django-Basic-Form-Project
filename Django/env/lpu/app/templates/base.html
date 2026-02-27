@@ -1,0 +1,103 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Movement Animation</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    {% include 'components/navbar.html' %}
+    <i class="fa-brands fa-amazon"></i>
+    
+    <main class="avatar-grid">
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/adam-argyle.png" alt="Adam Argyle" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/adam-wathan.png" alt="Adam Wathan" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/amy-dutton.png" alt="Amy Dutton" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/ania-kubow.png" alt="Ania Kubow" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/ben-hong.png" alt="Ben Hong" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/bree-hall.png" alt="Bree Hall" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/cassidy-williams.png" alt="Cassidy Williams" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/chris-coyier.png" alt="Chris Coyier" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/jason-lengstorf.png" alt="Jason Lengstorf" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/josh-comeau.png" alt="Josh Comeau" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/julia-miocene.png" alt="Julia Miocene" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/kevin-powell.png" alt="Kevin Powell" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/kyle-cook.png" alt="Kyle Cook" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/scott-tolinski.png" alt="Scott Tolinski" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/shaundai-person.png" alt="Shaundai Person" />
+      </div>
+      <div class="avatar">
+        <img src="https://madcss.com/avatars/color/wes-bos.png" alt="Wes Bos" />
+      </div>
+    </main>
+  
+
+    <h2>CSS Avataar</h2>
+
+    <div class="box"></div>
+
+</body>
+</html>
+
+ -->
+
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Home Page
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" >
+
+
+
+
+</head>
+
+<body>
+  {% include 'components/navbar.html' %}
+  {% block content %}
+  <h1>Hii I'm Groot</h1>
+  {% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

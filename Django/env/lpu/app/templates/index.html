@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <form  action= "{% url 'save_data' %}" method= "post" class="container mx-auto card p-4">
+        {% include 'components/ShowMessages.html' %}
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="title">Note Title</label>
+            <input name="title"
+                type="text" 
+                id="title" 
+                class="form-control" 
+                placeholder="Enter Note Title">
+        </div>
+
+        <div class="mb-3">
+            <label for="desc">Note Description</label>
+            <textarea 
+                rows="5" 
+                name="description"
+                id="desc" 
+                class="form-control" 
+                placeholder="Enter Note Description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <button 
+                style="width: 100%;" 
+                class="btn btn-primary">
+                Add Note <i class="fa-solid fa-arrow-right"></i>  
+            </button>
+        </div>
+        <div class="container">
+            <h1>Notes</h1>
+            <div class="p-2 col-sm-4">
+                {% for note in notes %}
+                <div class="card">
+                    <div class="card-body">
+                        <h4>{{note.title}}</h4>
+                        <p>{{note.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'edit_note' note.id %}" class="btn btn-sm btn-info">Edit</a>
+                        <a href="{% url 'delete_note' note.id %}" class="btn btn-sm btn-danger">Delete</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}
+
+
+{% block title %}
+{{block.super}}
+{% endblock %}
